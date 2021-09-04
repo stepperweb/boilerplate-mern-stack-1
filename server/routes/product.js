@@ -20,7 +20,7 @@ const upload = multer({ storage: storage }).single('file')
 
 router.post('/image', (req, res) => {
     //가져온 이미지를 저장해 주면 된다.
-    upload(req, res, (err) => {
+    upload(req, res, err => {
         if(err){
             return req.json({ success: false, err })
         }
